@@ -1,0 +1,13 @@
+#1
+buff := make([]byte, 8)
+		n1, err := file.Read(buff)
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			fmt.Printf("Error Reading Buffer %v", err)
+		}
+
+		fmt.Printf("read: %s\n", string(buff[:n1]))
+-------------------------------------------------------------------
+bugio
